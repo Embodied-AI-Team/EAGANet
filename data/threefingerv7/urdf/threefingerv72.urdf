@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="threefingerv7">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000400704444301246 2.53834015733273E-05 -0.00850922709249782"
+        rpy="0 0 0" />
+      <mass
+        value="0.158098732405424" />
+      <inertia
+        ixx="0.000154350646624654"
+        ixy="-2.77272753195956E-07"
+        ixz="-2.27161818492852E-06"
+        iyy="0.000154004906445453"
+        iyz="-7.99058211216347E-09"
+        izz="0.000217118434161234" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="move_link">
+    <inertial>
+      <origin
+        xyz="-1.38840313242298E-18 1.1767319360884E-17 -0.00419243214234177"
+        rpy="0 0 0" />
+      <mass
+        value="0.0085021271877303" />
+      <inertia
+        ixx="9.76418874057016E-07"
+        ixy="-1.05879118406788E-22"
+        ixz="3.53801734527502E-23"
+        iyy="9.7641887405701E-07"
+        iyz="5.4830223945276E-23"
+        izz="1.86965817859979E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/move_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/move_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="move_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.025087"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="move_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="5000"
+      velocity="2" />
+  </joint>
+  <link
+    name="11_link">
+    <inertial>
+      <origin
+        xyz="-0.0064999999999939 -5.07406616723216E-15 0.015"
+        rpy="0 0 0" />
+      <mass
+        value="0.0023425840131754" />
+      <inertia
+        ixx="4.99013749037845E-07"
+        ixy="1.32348898008484E-23"
+        ixz="-7.74228380420826E-24"
+        iyy="5.48312815441792E-07"
+        iyz="-4.68478650567877E-23"
+        izz="7.32310540795453E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/11_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/11_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="11_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0093875 0.02274 -0.004"
+      rpy="1.5708 1.1355 -0.5236" />
+    <parent
+      link="move_link" />
+    <child
+      link="11_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5000"
+      velocity="2" />
+    <mimic
+      joint="move_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="12_link">
+    <inertial>
+      <origin
+        xyz="-0.0293208969248166 -0.00876107376233067 0.0190000001135646"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122579255984349" />
+      <inertia
+        ixx="9.84660892016069E-07"
+        ixy="1.31799544484654E-06"
+        ixz="-2.57676349373328E-14"
+        iyy="7.20160465350243E-06"
+        iyz="1.09652704731506E-14"
+        izz="7.77283391142852E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/12_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/12_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- <joint
+    name="12_joint"
+    type="revolute">
+    <origin
+      xyz="-0.013 0 -0.004"
+      rpy="0 0 0" />
+    <parent
+      link="11_link" />
+    <child
+      link="12_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5000"
+      velocity="2" />
+    <mimic
+      joint="11_joint"
+      multiplier="1"
+      offset="0" />
+  </joint> -->
+  <link
+    name="21_link">
+    <inertial>
+      <origin
+        xyz="0.00649999999999391 -5.00901403688303E-15 -0.019"
+        rpy="0 0 0" />
+      <mass
+        value="0.0023425840131754" />
+      <inertia
+        ixx="4.99013749037844E-07"
+        ixy="-5.9557004103818E-23"
+        ixz="-1.3648480107125E-22"
+        iyy="5.48312815441791E-07"
+        iyz="-8.27180612553028E-24"
+        izz="7.32310540795452E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/21_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/21_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="21_joint"
+    type="revolute">
+    <origin
+      xyz="-0.019 -0.0195 -0.004"
+      rpy="1.5708 -1.1355 -1.5708" />
+    <parent
+      link="move_link" />
+    <child
+      link="21_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5000"
+      velocity="2" />
+    <mimic
+      joint="move_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="22_link">
+    <inertial>
+      <origin
+        xyz="0.0293216343766863 -0.00876108435078396 -0.0190000103494336"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122572499897457" />
+      <inertia
+        ixx="9.84650226311451E-07"
+        ixy="-1.31798330895562E-06"
+        ixz="-1.09743409174181E-12"
+        iyy="7.20145547037363E-06"
+        iyz="3.4075082013164E-13"
+        izz="7.77268089083732E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/22_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/22_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- <joint
+    name="22_joint"
+    type="revolute">
+    <origin
+      xyz="0.013 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="21_link" />
+    <child
+      link="22_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5000"
+      velocity="2" />
+    <mimic
+      joint="21_joint"
+      multiplier="1"
+      offset="0" />
+  </joint> -->
+  <link
+    name="31_link">
+    <inertial>
+      <origin
+        xyz="-0.00649999999999392 -5.04370850640257E-15 0.019"
+        rpy="0 0 0" />
+      <mass
+        value="0.0023425840131754" />
+      <inertia
+        ixx="4.99013749037845E-07"
+        ixy="3.30872245021211E-24"
+        ixz="2.23338765389317E-23"
+        iyy="5.48312815441792E-07"
+        iyz="2.15066959263787E-22"
+        izz="7.32310540795452E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/31_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/31_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="31_joint"
+    type="revolute">
+    <origin
+      xyz="0.026387 -0.0067045 -0.004"
+      rpy="1.5708 1.1355 -2.618" />
+    <parent
+      link="move_link" />
+    <child
+      link="31_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5000"
+      velocity="2" />
+    <mimic
+      joint="move_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="32_link">
+    <inertial>
+      <origin
+        xyz="0.0293216345242573 -0.00876108429611774 -0.0189999898761313"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122572498826079" />
+      <inertia
+        ixx="9.84650224489368E-07"
+        ixy="-1.31798329819406E-06"
+        ixz="1.04568287397069E-12"
+        iyy="7.20145543798657E-06"
+        iyz="-3.61695921355528E-13"
+        izz="7.77268085824629E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/32_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://threefingerv7/meshes/32_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- <joint
+    name="32_joint"
+    type="revolute">
+    <origin
+      xyz="-0.013 0 0"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="31_link" />
+    <child
+      link="32_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5000"
+      velocity="2" />
+    <mimic
+      joint="31_joint"
+      multiplier="1"
+      offset="0" />
+  </joint> -->
+
+  <joint
+    name="12_joint2"
+    type="revolute">
+    <origin
+      xyz="-0.031397 0.041221 0.03"
+      rpy="1.0472 1.5708 2.093" />
+    <parent
+      link="base_link" />
+    <child
+      link="12_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5000"
+      velocity="2" />
+  </joint>
+
+  <joint
+    name="22_joint2"
+    type="revolute">
+    <origin
+      xyz="-0.02 -0.047801 0.03"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="22_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5000"
+      velocity="2" />
+  </joint>
+
+  <joint
+    name="32_joint2"
+    type="revolute">
+    <origin
+      xyz="0.051397 0.0065801 0.03"
+      rpy="1.0472 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="32_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="5000"
+      velocity="2" />
+  </joint>
+</robot>

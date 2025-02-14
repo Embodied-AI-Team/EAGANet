@@ -1,0 +1,1 @@
+python -m pdb collect_data_robotiq.py yellow_cup

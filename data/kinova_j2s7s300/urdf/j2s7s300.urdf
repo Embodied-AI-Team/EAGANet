@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<!-- Kinova robot j2s7s300 -->
+<!-- j - Jaco -->
+<!-- 2 - v2 (Gen2) -->
+<!-- s - spherical wrist -->
+<!-- 7 - 7 DOF -->
+<!-- s - service -->
+<!-- 3 - 3 finger gripper -->
+<!-- 0 - reserved -->
+<!-- 0 - reserved -->
+<robot name="j2s7s300">
+    <link name="root">
+        <inertial>
+        <mass value="0.01"/>
+        <inertia ixx="1e-4" ixy="0.0" ixz="0.0" iyy="1e-4" iyz="0.0" izz="1e-4"/>
+        </inertial>
+    </link>
+    <link name="root1">
+        <inertial>
+        <mass value="0.01"/>
+        <inertia ixx="1e-4" ixy="0.0" ixz="0.0" iyy="1e-4" iyz="0.0" izz="1e-4"/>
+        </inertial>
+    </link>
+    <link name="root2">
+        <inertial>
+        <mass value="0.01"/>
+        <inertia ixx="1e-4" ixy="0.0" ixz="0.0" iyy="1e-4" iyz="0.0" izz="1e-4"/>
+        </inertial>
+    </link>
+    <link name="root3">
+        <inertial>
+        <mass value="0.01"/>
+        <inertia ixx="1e-4" ixy="0.0" ixz="0.0" iyy="1e-4" iyz="0.0" izz="1e-4"/>
+        </inertial>
+    </link>
+    <link name="root4">
+        <inertial>
+        <mass value="0.01"/>
+        <inertia ixx="1e-4" ixy="0.0" ixz="0.0" iyy="1e-4" iyz="0.0" izz="1e-4"/>
+        </inertial>
+    </link>
+    <link name="root5">
+        <inertial>
+        <mass value="1"/>
+        <inertia ixx="0.05" ixy="0.0" ixz="0.0" iyy="0.05" iyz="0.0" izz="0.05"/>
+        </inertial>
+    </link>
+    <link name="j2s7s300_link_7">
+        <visual>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/visual/hand_3finger.dae"/>
+            </geometry>
+        </visual>
+        <visual>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/visual/ring_small.dae"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/collision/hand_3finger.stl"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="x_joint" type="prismatic">
+        <parent link="root"/>
+        <child link="root1"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="-10" upper="10"/>
+    </joint>
+    <joint name="y_joint" type="prismatic">
+        <parent link="root1"/>
+        <child link="root2"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-10" upper="10"/>
+    </joint>
+    <joint name="z_joint" type="prismatic">
+        <parent link="root2"/>
+        <child link="root3"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-10" upper="10"/>
+    </joint>
+    <joint name="x_rotation_joint" type="continuous">
+        <parent link="root3"/>
+        <child link="root4"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+    <joint name="y_rotation_joint" type="continuous">
+        <parent link="root4"/>
+        <child link="root5"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <joint name="z_rotation_joint" type="continuous">
+        <parent link="root5"/>
+        <child link="j2s7s300_link_7"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <!-- Hand Links -->
+    <link name="j2s7s300_link_finger_1">
+        <visual>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/visual/finger_proximal.dae"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/collision/finger_proximal.stl"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="j2s7s300_link_finger_tip_1">
+        <visual>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/visual/finger_distal.dae"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/collision/finger_distal.stl"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="j2s7s300_link_finger_2">
+        <visual>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/visual/finger_proximal.dae"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/collision/finger_proximal.stl"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="j2s7s300_link_finger_tip_2">
+        <visual>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/visual/finger_distal.dae"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/collision/finger_distal.stl"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="j2s7s300_link_finger_3">
+        <visual>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/visual/finger_proximal.dae"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/collision/finger_proximal.stl"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="j2s7s300_link_finger_tip_3">
+        <visual>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/visual/finger_distal.dae"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="../kinova_j2s7s300/meshes/collision/finger_distal.stl"/>
+            </geometry>
+        </collision>
+    </link>
+
+
+    <!-- Finger Joints -->
+    <joint name="j2s7s300_joint_finger_1" type="revolute">
+        <parent link="j2s7s300_link_7"/>
+        <child link="j2s7s300_link_finger_1"/>
+        <origin rpy="-1.570796327 .649262481663582 1.35961148639407" xyz="0.00279 0.03126 -0.11467"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="2000" lower="0" upper="2" velocity="1"/>
+    </joint>
+
+    <joint name="j2s7s300_joint_finger_tip_1" type="revolute">
+        <parent link="j2s7s300_link_finger_1"/>
+        <child link="j2s7s300_link_finger_tip_1"/>
+        <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="2000" lower="0" upper="2" velocity="1"/>
+    </joint>
+
+    <joint name="j2s7s300_joint_finger_2" type="revolute">
+        <parent link="j2s7s300_link_7"/>
+        <child link="j2s7s300_link_finger_2"/>
+        <origin rpy="-1.570796327 .649262481663582 -1.38614049188413" xyz="0.02226 -0.02707 -0.11482"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="2000" lower="0" upper="2" velocity="1"/>
+    </joint>
+
+    <joint name="j2s7s300_joint_finger_tip_2" type="revolute">
+        <parent link="j2s7s300_link_finger_2"/>
+        <child link="j2s7s300_link_finger_tip_2"/>
+        <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="2000" lower="0" upper="2" velocity="1"/>
+    </joint>
+
+    <joint name="j2s7s300_joint_finger_3" type="revolute">
+        <parent link="j2s7s300_link_7"/>
+        <child link="j2s7s300_link_finger_3"/>
+        <origin rpy="-1.570796327 .649262481663582 -1.75545216211587" xyz="-0.02226 -0.02707 -0.11482"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="2000" lower="0" upper="2" velocity="1"/>
+    </joint>
+
+    <joint name="j2s7s300_joint_finger_tip_3" type="revolute">
+        <parent link="j2s7s300_link_finger_3"/>
+        <child link="j2s7s300_link_finger_tip_3"/>
+        <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="2000" lower="0" upper="2" velocity="1"/>
+    </joint>
+
+    <!-- End-effector -->
+    <!-- <link name="j2s7s300_end_effector" />
+    <joint name="j2s7s300_joint_end_effector" type="fixed">
+        <origin rpy="3.14159265359 0 1.57079632679" xyz="0 0 -0.16"/>
+        <parent link="j2s7s300_link_7"/>
+        <child link="j2s7s300_end_effector"/>
+    </joint> -->
+
+</robot>
+
