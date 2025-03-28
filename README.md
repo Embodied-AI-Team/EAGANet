@@ -1,10 +1,10 @@
-# Simulation-Based Grasping with Efficient Adaptability of Gripper Properties
+# EAGA-Net: A Novel Simulation-based Grasping Detection Dataset and Network with Efficient Adaptability of Gripper Attribute
 
 
-![Overview](/images/fig1.jpg)
+![Overview](/images/fig1.drawio.png)
 
 
-**The Proposed GAAGNet Task.** First, we collect a dataset of gripper attributes. Second, we construct a grasp learning network. Finally, we generate a grasping policy adapted to the gripper attributes.
+**The Proposed EAGA-Net Task.** First, we collect a dataset of gripper attributes. Second, we construct a grasp learning network. Finally, we generate a grasping policy adapted to the gripper attributes.
 
 ## Introduction
 Grasping detection based on machine vision is a critical yet challenging task due to the uncertainties in object and gripper attributes. While prior methods primarily focus on grippers with fixed attributes, they often fail in real-world scenarios due to mismatches between object and gripper characteristics. In this paper, we propose an innovative approach that leverages an attribute-adaptive dataset and deep neural networks to predict grasps for diverse grippers. Our key contributions include:
@@ -15,7 +15,7 @@ Grasping detection based on machine vision is a critical yet challenging task du
 
 ## About the paper
 
-GAAGNet is being submitted to the IEEE Transactions on Instrumentation & Measurement journal.
+EAGA-Net is being submitted to the Advanced Engineering Informatics.
 
 ## About this repository
 
@@ -39,4 +39,5 @@ Fig. 2. Visualization of the per-pixel grasp scoring network predictions for a g
 
 We illustrate the estimated graspability scores of our method on four grippers with different attributes and present the top 5 grasps with the highest scores in Fig. 3. 
 ![Overview](/images/fig6.png)
+
 Fig. 3. Visualization of per-pixel graspability scores and grasp proposals predictions on example objects
